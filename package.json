@@ -1,0 +1,19 @@
+{
+  "name": "exerciciotypoo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx ts-node-dev --respawn ex.ts"
+  },
+  "author": "",
+  "repository": "https://github.com/penteado-git/exercicioTypeScript",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.7.3"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0"
+  }
+}
