@@ -1,4 +1,9 @@
 "use strict";
+import { sendMessage } from "./ex"
+import { registerUser } from "./ex"
+import { seeHistory } from "./ex"
+import { mainMenu } from "./ex"
+
 class User {
     constructor() {
         this.name = "";
