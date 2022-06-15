@@ -1,16 +1,16 @@
 export function sendMessage() {
     let messageSubject = "";
-    var messageText = "";
+    let messageText = "";
     let userFrom = "";
     let userTo = "";
     let menuFrom = new User();
     let menuTo = new User();
     while (userFrom == "" || userFrom == null) {
-        listaUsuarios.listUsers();
+        listUser.listUsers();
         userFrom = prompt("Escolha um código de usuário remetente");
         menuFrom.setCode(Number(userFrom));
         menuFrom.setName("");
-        menuFrom = listaUsuarios.checkUser(menuFrom);
+        menuFrom = listUser.checkUser(menuFrom);
         if (menuFrom.getCode() == 0) {
             alert("Usuario não existe");
             userFrom = "";
@@ -18,11 +18,11 @@ export function sendMessage() {
         userFrom = menuFrom.getName();
     }
     while (userTo == "" || userTo == null) {
-        listaUsuarios.listUsers();
+        listUser.listUsers();
         userTo = prompt("Escolha um código de usuário destinatário");
         menuTo.setCode(Number(userTo));
         menuTo.setName("");
-        menuTo = listaUsuarios.checkUser(menuTo);
+        menuTo = listUser.checkUser(menuTo);
         if (menuTo.getCode() == 0) {
             alert("usuario não existe");
             userTo = "";
@@ -43,7 +43,7 @@ export function sendMessage() {
     listMessages.addMessage(message);
 }
 var listMessages = new messageList();
-var listaUsuarios = new usersList();
+var listUser = new usersList();
 export function registerUser() {
     const user = new User();
     let userName = "";
@@ -56,19 +56,19 @@ export function registerUser() {
     }
     user.setCode(Number(userCode));
     user.setName(userName);
-    listaUsuarios.userRegister(user);
-    listaUsuarios.listUsers();
+    listUser.userRegister(user);
+    listUser.listUsers();
 }
 export function seeHistory() {
     let userMessage = "";
     let user = new User();
-    listaUsuarios.listUsers();
+    listUser.listUsers();
     while (userMessage == "" || userMessage == null) {
         userMessage = prompt("Escolha de qual usuário deseja ver o histórico de mensagem");
     }
     user.setCode(Number(userMessage));
     user.setName("");
-    user = listaUsuarios.checkUser(user);
+    user = listUser.checkUser(user);
     listMessages.showMessage(user);
 }
 export function mainMenu() {
