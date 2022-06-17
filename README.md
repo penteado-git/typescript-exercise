@@ -1,11 +1,15 @@
 # exercicioTypeScript
 
-<p>Projeto feito em Typescript transpilado para Javascript, utilizando npm e node.js</p>
-<p>Para instalar o typescript no projeto você precisa ter o node.js instalado e usar os comandos<br>
-<code>npm init</code><br>
-<code>npm i typescript</code><br>
-<code>npx tsc --init</code><br>
-<code>npm i --save-dev @types/node</code><br>
-<p>Abrir o arquivo tsconfig.json gerado na pasta raís do projeto e tirar o // (descomentar) o comando "outDir": "./dir", onde "./dir" será o diretório onde será transpilado o código para Javascript.<br>
-<p>E então no terminal na pasta raíz do projeto utilizar o comando: <code>npx tsc</code> para transpilar o código.</p><br>
-<p></p>
+<p>Projeto feito em Typescript utilizando npm e node.js</p>
+<h1>Pré-requisitos<h1>
+<p>Para instalar o typescript no projeto você precisa ter o node.js instalado<br>
+<h1>Passo 1 — Inicializando um projeto npm<h1>
+<p>Para começar, crie uma nova pasta chamada node_project e vá até esse diretório.<p> 
+<code>mkdir node_project<code>
+<code>cd node_project<code>
+  <p>Em seguida, inicialize-o como um projeto npm:<p>
+  <code>npm init<code>
+<p>Depois de executar o <code>npm init<code>, será necessário fornecer informações sobre o seu projeto ao npm. Caso prefira deixar que o npm assuma padrões sensatos, adicione o sinalizador y para ignorar os prompts para obter informações adicionais:<p>
+
+
+  
