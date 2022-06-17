@@ -1,7 +1,7 @@
 # exercicioTypeScript
 
 <p>Projeto feito em Typescript utilizando npm e node.js<p>
-<h1>Pré-requisitos</h1>
+<p>Pré-requisitos</p>
   <p>Para instalar o typescript no projeto você precisa ter o node.js instalado</p>
 <p>Passo 1 — Inicializando um projeto npm</p>
   <p>Para começar, crie uma nova pasta chamada node_project e vá até esse diretório.</p>
