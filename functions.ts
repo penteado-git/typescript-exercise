@@ -1,4 +1,4 @@
-export function sendMessage() {
+export function sendMessage() {   //Função da opção "2" de enviar mensagem.
   let messageSubject: string | null = "";
   var messageText: string | null = "";
   let userFrom: string | null = "";
@@ -36,6 +36,30 @@ export function sendMessage() {
     alert("Remetente e Destinatário iguais");
     sendMessage();
   }
+  
+  while (typeOf == "" || typeOf == null) {
+    typeOf = prompt("Deseja enviar uma mensagem apimentada?", "S/N");
+  }
+
+  if (typeOf == "S") {
+    
+    async function getAPIMessage(message: string) {   //Pega a API do Foaas usando um  método assíncrono.
+      let url = `https://foaas.com${message}`;
+      let response = await fetch(url, {
+        method: "GET",
+        headers: { Accept: "application/json" },
+      });
+     
+      var data = await response.json();
+      data = data.message;
+   
+      localStorage.setItem("msg", data);
+    }
+ 
+    getAPIMessage("/asshole/:from");
+    
+    messageText = localStorage.getItem("msg");
+  } else {
 
   while (messageSubject == "" || messageSubject == null) {
     messageSubject = prompt("Digite um Assunto");
@@ -52,7 +76,7 @@ export function sendMessage() {
 var listMessages = new messageList();
 var listUser = new usersList();
 
-export function registerUser() {
+export function registerUser() {  //Função da opção "1" de cadastrar usuario.
   const user = new User();
   let userName: string | null = "";
   let userCode: string | null = "";
@@ -69,7 +93,7 @@ export function registerUser() {
   listUser.listUsers();
 }
 
-export function seeHistory() {
+export function seeHistory() {  //Função da opção "3" de consultar o historico de mensagem
   let userMessage: string | null = "";
   let user = new User();
 
@@ -86,7 +110,7 @@ export function seeHistory() {
   listMessages.showMessage(user);
 }
 
-export function mainMenu() {
+export function mainMenu() { //Função que mostra o prompt com o menu para interação do usuario e cadastro do mesmo.
   var variable = prompt(
     "1 - Cadastrar Usuário\n2 - Enviar Mensagem\n3 - Ver histórico de mensagens\n4 - Sair"
   );
