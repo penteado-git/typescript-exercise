@@ -5,6 +5,7 @@ export function sendMessage() {
     let userTo = "";
     let menuFrom = new User();
     let menuTo = new User();
+    let typeOf = "";
     while (userFrom == "" || userFrom == null) {
         listUser.listUsers();
         userFrom = prompt("Escolha um código de usuário remetente");
@@ -33,6 +34,27 @@ export function sendMessage() {
         alert("Remetente e Destinatário iguais");
         sendMessage();
     }
+    
+    while (typeOf == "" || typeOf == null) {
+        typeOf = prompt("Deseja enviar uma mensagem apimentada?", "S/N");
+    }
+    if (typeOf == "S") {
+        function getAPIMessage(message) {
+            return __awaiter(this, void 0, void 0, function* () {
+                let url = `https://foaas.com${message}`;
+                let response = yield fetch(url, {
+                    method: "GET",
+                    headers: { Accept: "application/json" },
+                });
+                var data = yield response.json();
+                data = data.message;
+                localStorage.setItem("msg", data);
+            });
+        }
+        getAPIMessage("/asshole/:from");
+        messageText = localStorage.getItem("msg");
+    }else {
+        
     while (messageSubject == "" || messageSubject == null) {
         messageSubject = prompt("Digite um Assunto");
     }
