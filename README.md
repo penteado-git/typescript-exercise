@@ -2,15 +2,15 @@
 
 <p>Projeto feito em Typescript utilizando npm e node.js<p>
 <h1>Pré-requisitos<h1>
-Para instalar o typescript no projeto você precisa ter o node.js instalado
+  <p>Para instalar o typescript no projeto você precisa ter o node.js instalado</p>
 <h1>Passo 1 — Inicializando um projeto npm<h1>
-Para começar, crie uma nova pasta chamada node_project e vá até esse diretório.
+  <p>Para começar, crie uma nova pasta chamada node_project e vá até esse diretório.</p>
 <code>mkdir node_project<code>
 <code>cd node_project<code>
-  Em seguida, inicialize-o como um projeto npm:
+  <p>Em seguida, inicialize-o como um projeto npm:</p>
   <code>npm init<code>
-Depois de executar o <code>npm init<code>, será necessário fornecer informações sobre o seu projeto ao npm. Caso prefira deixar que o npm assuma padrões sensatos, adicione o sinalizador y para ignorar os prompts para obter informações adicionais:
+<p>Depois de executar o <code>npm init<code>, será necessário fornecer informações sobre o seu projeto ao npm. Caso prefira deixar que o npm assuma padrões sensatos, adicione o sinalizador y para ignorar os prompts para obter informações adicionais:</p>
 <code>npm init -y<code>
-  Agora que seu espaço de projeto está configurado, podemos seguir para a instalação das dependências necessárias.
+  <p>Agora que seu espaço de projeto está configurado, podemos seguir para a instalação das dependências necessárias.</p>
 
   
