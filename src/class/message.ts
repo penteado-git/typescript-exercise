@@ -1,5 +1,5 @@
-import { listUsers, listMessages } from "../ex.js";
-import  {User}  from "./user.js"
+import { listaUsuarios, listMessages } from "./dist/class/messageList.js";
+import  {User}  from "./dist/class/user.js";
 
 export class Message {
   private userFrom: User;
