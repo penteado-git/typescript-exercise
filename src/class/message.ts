@@ -1,4 +1,7 @@
-class Message {
+import { listUsers, listMessages } from "../ex.js";
+import  {User}  from "./user.js"
+
+export class Message {
   private userFrom: User;
   private userFromName: string;
   private userTo: User;
