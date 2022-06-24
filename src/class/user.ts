@@ -1,4 +1,8 @@
-class User {
+import {messageList} from "./messageList"
+import { listMessages } from "./message";
+import { listaUsuarios } from "./message";
+
+export class User {
   private name: string | null = "";
   private code: number = 0;
 
@@ -19,7 +23,7 @@ class User {
   }
 }
 
-function registerUser() {
+export function registerUser() {
   const user = new User();
   let userName: string | null = "";
   let userCode: string | null = "";
