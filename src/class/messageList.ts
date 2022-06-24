@@ -1,4 +1,8 @@
-class messageList {
+import { User } from "./user";
+import { Message } from "./message";
+import { usersList } from "./usersList";
+
+export class messageList {
   private messages = new Array<Message>();
 
   addMessage(msg: Message): void {
@@ -28,7 +32,7 @@ class messageList {
 var listMessages = new messageList();
 var listaUsuarios = new usersList();
 
-function seeHistory() {
+export function seeHistory() {
   let userMessage: string | null = "";
   let user = new User();
 
