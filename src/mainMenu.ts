@@ -1,7 +1,7 @@
-//import {usersList} from "./dist/class/usersList"
-//import  {messageList}  from "./dist/class/messageList.js";
-//import  {Message}  from "./dist/class/messageClass.js";
-//import  {User}  from "./dist/class/user.js";
+import {usersList} from "./dist/class/usersList"
+import  {messageList}  from "./dist/class/messageList.js";
+import  {Message}  from "./dist/class/messageClass.js";
+import  {User}  from "./dist/class/user.js";
 
 function mainMenu() {
   var variable = prompt(
