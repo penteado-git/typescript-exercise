@@ -1,44 +1,41 @@
-import { User } from "./user";
+import { messageList } from "./messageList";
+import { listMessages } from "./message";
+import { listaUsuarios } from "./message";
 
-export class usersList {
-  private users = new Array<User>();
+export class User {
+  private name: string | null = "";
+  private code: number = 0;
 
-  userRegister(user: User) {
-    if (this.users.length == 0) {
-      this.users.push(user);
-    } else {
-      for (let i in this.users) {
-        if (this.users[i].getCode() == user.getCode()) {
-          alert("Código já cadastrado");
-        } else {
-          this.users.push(user);
-          alert("Usuario Cadastrado!");
-        }
-      }
-    }
+  public getName() {
+    return this.name;
   }
 
-  listUsers(): void {
-    if (this.users.length == 0) {
-      console.log("Lista vazia");
-    }
-    console.clear();
-    for (let i in this.users) {
-      console.log(this.users[i]);
-    }
+  public setName(name: string | null) {
+    this.name = name;
   }
 
-  checkUser(user: User): User {
-    for (let i in this.users) {
-      if (this.users[i].getCode() === user.getCode()) {
-        user.setName(this.users[i].getName());
-        console.log("Usuario encontrado");
-        return user;
-      }
-    }
-    console.log("Usuario não existe");
-    user.setName("");
-    user.setCode(0);
-    return user;
+  public getCode() {
+    return this.code;
   }
+
+  public setCode(code: number) {
+    this.code = code;
+  }
+}
+
+export function registerUser() {
+  const user = new User();
+  let userName: string | null = "";
+  let userCode: string | null = "";
+
+  while (userName == "" || userName == null) {
+    userName = prompt("Digite o nome");
+  }
+  while (userCode == "" || userCode == null) {
+    userCode = prompt("Digite um código");
+  }
+  user.setCode(Number(userCode));
+  user.setName(userName);
+  listaUsuarios.userRegister(user);
+  listaUsuarios.listUsers();
 }
