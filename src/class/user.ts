@@ -1,5 +1,4 @@
 import { messageList } from "./messageList";
-import { listMessages } from "./message";
 import { listaUsuarios } from "./message";
 
 export class User {
