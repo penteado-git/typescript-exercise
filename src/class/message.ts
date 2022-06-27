@@ -1,5 +1,6 @@
-import { listaUsuarios, listMessages } from "./dist/class/messageList.js";
-import  {User}  from "./dist/class/user.js";
+import { User } from "./user";
+import { messageList } from "./messageList";
+import { usersList } from "./usersList";
 
 export class Message {
   private userFrom: User;
@@ -76,7 +77,7 @@ export class Message {
   }
 }
 
-function sendMessage() {
+export function sendMessage() {
   let messageSubject: string | null = "";
   var messageText: string | null = "";
   let userFrom: string | null = "";
@@ -149,3 +150,6 @@ function sendMessage() {
   let message = new Message(menuFrom, menuTo, messageSubject, messageText);
   listMessages.addMessage(message);
 }
+
+export var listMessages = new messageList();
+export var listaUsuarios = new usersList();
