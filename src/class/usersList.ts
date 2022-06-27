@@ -1,4 +1,6 @@
-class usersList {
+import { User } from "./user";
+
+export class usersList {
   private users = new Array<User>();
 
   userRegister(user: User) {
