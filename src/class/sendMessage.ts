@@ -3,6 +3,9 @@ import { Message } from "./message";
 import { usersList } from "./usersList";
 import { messageList } from "./messageList";
 
+export var listMessages = new messageList();
+export var listaUsuarios = new usersList()
+
 export function sendMessage(){
 
     let messageSubject: string | null = "";
@@ -78,5 +81,4 @@ export function sendMessage(){
     listMessages.addMessage(message);
   }
   
-  export var listMessages = new messageList();
-  export var listaUsuarios = new usersList()
+  
