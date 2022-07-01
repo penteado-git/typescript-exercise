@@ -1,6 +1,8 @@
 import { User } from "./user";
 import { messageList } from "./messageList";
 import { usersList } from "./usersList";
+export var listMessages = new messageList();
+export var listaUsuarios = new usersList();
 
 export class Message {
   private userFrom: User | string | null = "";
@@ -78,6 +80,3 @@ export class Message {
 }
 
 
-
-export var listMessages = new messageList();
-export var listaUsuarios = new usersList();
